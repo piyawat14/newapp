@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/aboutme">
+
+    <fragment
+        android:id="@+id/aboutme"
+        android:name="com.example.newfristapp.Aboutme"
+        android:label="Aboutme"
+        tools:layout="@layout/fragment_aboutme" >
+        <action
+            android:id="@+id/action_aboutme_to_contactFragment"
+            app:destination="@id/contactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.newfristapp.ContactFragment"
+        android:label="Contact"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_contactFragment_to_aboutme"
+            app:destination="@id/aboutme" />
+    </fragment>
+</navigation>
